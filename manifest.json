@@ -12,13 +12,13 @@
     "overrides": "overrides",
     "manifestVersion": 1,
     "version": "1.0",
-    "author": "GregTech Community Pack Dev Team",
+    "author": "joendter + GregTech Community Pack Dev Team",
     "externalDeps": [],
-    "name": "GregTech Community Pack",
+    "name": "GregTech Community Pack Nuclearcraft Edition",
     "files": [
         {
             "projectID": 557549,
-            "fileID": 4109510,
+            "fileID": 4506796,
             "required": true
         },
         {
@@ -418,7 +418,7 @@
         },
         {
             "projectID": 557242,
-            "fileID": 4483462,
+            "fileID": 4527757,
             "required": true
         },
         {
