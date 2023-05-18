@@ -1,9 +1,9 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
-
+ import crafttweaker.item.IIngredient;
 
 //yeet stuff
-
+// removeAndHide
 var removeItems= [
 <nuclearcraft:ore>,
 <nuclearcraft:ore:1>,
@@ -12,7 +12,21 @@ var removeItems= [
 <nuclearcraft:ore:4>,
 <nuclearcraft:ore:5>,
 <nuclearcraft:ore:6>,
-<nuclearcraft:ore:7>
+<nuclearcraft:ore:7>,
+<nuclearcraft:lithium_ion_cell>,
+<nuclearcraft:ingot_block:14>,
+<nuclearcraft:ingot_block:15>,
+<nuclearcraft:heat_exchanger_controller>,
+<nuclearcraft:heat_exchanger_casing>,
+<nuclearcraft:heat_exchanger_glass>,
+<nuclearcraft:heat_exchanger_vent>,
+<nuclearcraft:heat_exchanger_tube_copper>,
+<nuclearcraft:heat_exchanger_tube_hard_carbon>,
+<nuclearcraft:heat_exchanger_tube_thermoconducting>,
+<nuclearcraft:condenser_controller>,
+<nuclearcraft:condenser_tube_copper>,
+<nuclearcraft:condenser_tube_hard_carbon>,
+<nuclearcraft:condenser_tube_thermoconducting>
 
 
 ] as  IItemStack[];
@@ -89,8 +103,41 @@ var removeItems2= [
 ,<nuclearcraft:gem:1>
 ,<nuclearcraft:alloy:6>
 ,<nuclearcraft:alloy:1>
-
-
+,<nuclearcraft:alloy:7>
+,<nuclearcraft:alloy:8>
+,<nuclearcraft:alloy:9>
+,<nuclearcraft:dust:14>
+,<nuclearcraft:dust:15>
+,<nuclearcraft:alloy:15>
+,<nuclearcraft:ingot:14>
+,<nuclearcraft:ingot:15>
+,<nuclearcraft:gem:5>
+,<nuclearcraft:gem_dust:4>
+,<nuclearcraft:alloy:2>
+,<nuclearcraft:alloy:3>
+,<nuclearcraft:compound:2>
+,<nuclearcraft:compound:3>
+,<nuclearcraft:compound:4>
+,<nuclearcraft:alloy:4>
+,<nuclearcraft:alloy:10>
+,<nuclearcraft:alloy:11>
+,<nuclearcraft:alloy:16>
+,<nuclearcraft:compound>
+,<nuclearcraft:compound:1>
+,<nuclearcraft:compound:6>
+,<nuclearcraft:compound:10>
+,<nuclearcraft:compound:11>
+,<nuclearcraft:part:1>
+,<nuclearcraft:part:2>
+,<nuclearcraft:part:3>
+,<nuclearcraft:part:4>
+,<nuclearcraft:part:5>
+,<nuclearcraft:part:6>
+,<nuclearcraft:part:7>
+,<nuclearcraft:part:8>
+,<nuclearcraft:part:9>
+,<nuclearcraft:part:10>
+,<nuclearcraft:part:15>
 ] as  IItemStack[];
 
 var rmOredicts = [
@@ -150,8 +197,41 @@ var rmOredicts = [
 ,<ore:gemBoronNitride>
 ,<ore:ingotFerroboron>
 ,<ore:ingotTough>
-
-
+,<ore:ingotShibuichi>
+,<ore:ingotTinSilver>
+,<ore:ingotLeadPlatinum>
+,<ore:dustManganeseOxide>
+,<ore:dustManganeseDioxide>
+,<ore:ingotHSLASteel>
+,<ore:ingotManganeseOxide>
+,<ore:ingotManganeseDioxide>
+,<ore:gemBoronArsenide>
+,<ore:dustBoronNitride>
+,<ore:ingotHardCarbon>
+,<ore:ingotMagnesiumDiboride>
+,<ore:dustEnergetic>
+,<ore:dustSodiumFluoride>
+,<ore:dustPotassiumFluoride>
+,<ore:ingotLithiumManganeseDioxide>
+,<ore:ingotExtreme>
+,<ore:ingotThermoconducting>
+,<ore:ingotZirconiumMolybdenum>
+,<ore:dustCalciumSulfate>
+,<ore:dustCrystalBinder>
+,<ore:dustPotassiumHydroxide>
+,<ore:dustCarbonManganese>
+,<ore:dustAlugentum>
+,<ore:plateAdvanced>
+,<ore:plateDU>
+,<ore:plateElite>
+,<ore:solenoidCopper>
+,<ore:solenoidMagnesiumDiboride>
+,<ore:bioplastic>
+,<ore:servo>
+,<ore:motor>
+,<ore:actuator>
+,<ore:chassis>
+,<ore:ingotPyrolyticCarbon>
 ] as IOreDictEntry[];
 
 for i,item in removeItems2{
@@ -169,6 +249,8 @@ var removeItems3= [
 ,<nuclearcraft:solar_panel_du>
 ,<nuclearcraft:solar_panel_elite>
 ,<nuclearcraft:decay_generator>
+,<nuclearcraft:ingot:4>
+,<nuclearcraft:upgrade:1>
 
 ] as IItemStack[];
 
@@ -176,3 +258,7 @@ for i,item in removeItems3{
 	furnace.remove(item);
 	mods.jei.JEI.removeAndHide(item);
 }
+
+
+mods.nuclearcraft.Separator.removeRecipeWithOutput( <nuclearcraft:uranium:10>*9, <nuclearcraft:uranium:5>);
+
