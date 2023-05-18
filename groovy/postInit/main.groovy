@@ -155,7 +155,7 @@ crafting.shapedBuilder()
         [ore('ingotZircaloy'), item('gregtech:boiler_casing', 2), ore('ingotZircaloy')],
         [ore('plateBasic'), ore('ingotZircaloy'), ore('plateBasic')]
     ])
-    .output(item('nuclearcraft:salt_fission_vessel'))
+    .output(item('nuclearcraft:salt_fission_vessel')*4)
     .replace()
     .register()
 
