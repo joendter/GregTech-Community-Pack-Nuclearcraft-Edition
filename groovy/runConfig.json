@@ -1,0 +1,15 @@
+{
+  "packName": "GCP Nuclearcraft Edition",
+  "packId": "gcp_nc_edition",
+  "version": "1.0.0",
+  "debug": false,
+  "classes": [],
+  "loaders": {
+    "preInit": [
+      "preInit/"
+    ],
+    "postInit": [
+      "postInit/"
+    ]
+  }
+}
