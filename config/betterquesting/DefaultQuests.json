@@ -1,4 +1,5 @@
 {
+  "build:8": "4.1.0",
   "format:8": "2.0.0",
   "questDatabase:9": {
     "0:10": {
@@ -24858,7 +24859,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§oDon\u0027t worry it\u0027s simplified enough, you won\u0027t end up on a watch list or anything...§r\n\n§aUranium§r has very few uses in §2GTCEu§r right now, as we have §4not yet§r implemented the §3Nuclear Reactor§r (it is planned!).\n\nMake §dUranium Hexafluoride§r from §aUraninite§r, this will allow you to seperate the isotopes between U238 and U235.\n\n§9Fluorine§r is fully recycled in the reaction, but you will need around maybe 40 buckets to bootstrap.\n§9Hydrogen§r is consumed, you will need quite a lot of it. Either electrolyze a lot of water using several §3LV Electrolyzer§r for the best energy efficiency, or recycle your unused §dhydrocarbons§r such as Methane.\n\n§9Tip:§r You can make this setup compact by having one single §3Centrifuge§r and using a §6Fluid Regulator§r set to §dSupply Exact 1,000§r.",
+          "desc:8": "§oDon\u0027t worry it\u0027s simplified enough, you won\u0027t end up on a watch list or anything...§r\n\n§aUranium§r has very few uses in §2GTCEu§r right now, as we have §4not yet§r implemented the §3Nuclear Reactor§r (it is planned!).\nBut there are other mods besides §2GTCEu§f like §5Nuclearcraft Overhauled§f.\nIn this Pack NC:O is used for all kinds of nuclear shenanigans.\n\nMake §dUranium Hexafluoride§r from §aUraninite§r, this will allow you to seperate the isotopes between U238 and U235.\n\n§9Fluorine§r is fully recycled in the reaction, but you will need around maybe 40 buckets to bootstrap.\n§9Hydrogen§r is consumed, you will need quite a lot of it. Either electrolyze a lot of water using several §3LV Electrolyzer§r for the best energy efficiency, or recycle your unused §dhydrocarbons§r such as Methane.\n\n§9Tip:§r You can make this setup compact by having one single §3Centrifuge§r and using a §6Fluid Regulator§r set to §dSupply Exact 1,000§r.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24942,23 +24943,19 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "§o200 seconds what!? Don\u0027t worry this is nothing compared to running an EBF.§r\n\nHopefully for you, the §3LCR§r recipe in §2JEI§r for §aRadon§r should be self explanatory on how to set it up.\n\nInput some §aUranium§r, loop back the §dPlutonium§r using a §3Electric Furnace§r, and let the magic happen.\n\n\n§bLore:§r This cursed, yet charming \"chain\" is inherited from GregTech 5.\nPlutonium 239 existing as an ore is a sort of a placeholder to avoid having to obtain it through complicated means.",
+          "desc:8": "No more cursed centrifuging U-238.\nWe got proper nuclear reactors now.\nNuclearcraft Overhauled adds Solid Fission Reactors, which will supply you with all your radioactive needs.\nFor planning one I recommend §9https://github.com/ThizThizzyDizzy/nc-reactor-generator/releases\n§rThe items in this task are the absolute minimum required to progress.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
             "Damage:2": 0,
             "OreDict:8": "",
-            "id:8": "forge:bucketfilled",
-            "tag:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "radon"
-            }
+            "id:8": "nuclearcraft:solid_fission_controller"
           },
           "ignoresview:1": 0,
           "ismain:1": 0,
           "issilent:1": 0,
           "lockedprogress:1": 0,
-          "name:8": "Radon",
+          "name:8": "NUCLEAR",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -24981,27 +24978,37 @@
           "partialMatch:1": 1,
           "requiredItems:9": {
             "0:10": {
-              "Count:3": 8,
-              "Damage:2": 81,
+              "Count:3": 1,
+              "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "gregtech:meta_ingot"
+              "id:8": "nuclearcraft:solid_fission_controller"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:solid_fission_cell"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_irradiator"
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_casing"
+            },
+            "4:10": {
+              "Count:3": 1,
+              "Damage:2": 14,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:part"
             }
           },
           "taskID:8": "bq_standard:retrieval"
-        },
-        "1:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
-          "index:3": 1,
-          "requiredFluids:9": {
-            "0:10": {
-              "Amount:3": 1000,
-              "FluidName:8": "radon"
-            }
-          },
-          "taskID:8": "bq_standard:fluid"
         }
       }
     },
@@ -30370,6 +30377,133 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "469:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Tells you how badly irradiated you and the chunk you\u0027re standing in are.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:geiger_counter"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Geiger Counter",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 469,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:geiger_counter"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "470:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "This will protect you from Radiation.\nGTCEu armor doesn\u0027t work for radiation shielding yet.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:helm_hazmat",
+            "tag:10": {}
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Hazmat Suit",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 470,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:helm_hazmat",
+              "tag:10": {}
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:chest_hazmat",
+              "tag:10": {}
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:legs_hazmat",
+              "tag:10": {}
+            },
+            "3:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:boots_hazmat",
+              "tag:10": {}
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -32629,8 +32763,8 @@
           "id:3": 207,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -36,
-          "y:3": 246
+          "x:3": -12,
+          "y:3": 276
         },
         "6:10": {
           "id:3": 208,
@@ -32921,10 +33055,10 @@
         },
         "47:10": {
           "id:3": 380,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": -30,
-          "y:3": 168
+          "sizeX:3": 36,
+          "sizeY:3": 36,
+          "x:3": -12,
+          "y:3": 192
         },
         "48:10": {
           "id:3": 381,
@@ -32965,8 +33099,8 @@
           "id:3": 392,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 54,
-          "y:3": 168
+          "x:3": 60,
+          "y:3": 204
         },
         "54:10": {
           "id:3": 408,
@@ -32995,6 +33129,20 @@
           "sizeY:3": 24,
           "x:3": -114,
           "y:3": 18
+        },
+        "58:10": {
+          "id:3": 469,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 60,
+          "y:3": 168
+        },
+        "59:10": {
+          "id:3": 470,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 36,
+          "y:3": 144
         }
       }
     },
@@ -35234,7 +35382,7 @@
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 0,
+      "editmode:1": 1,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
