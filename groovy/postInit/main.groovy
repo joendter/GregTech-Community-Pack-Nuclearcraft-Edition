@@ -362,3 +362,21 @@ crafting.shapedBuilder()
     .output(item('nuclearcraft:wasteland_portal')*2)
     .replace()
     .register()
+
+//wasteland air
+mods.gregtech.gas_collector.recipeBuilder()
+    .circuitMeta(11)
+    //.notConsumable(ore("dirt"))
+    .fluidOutputs(fluid('air')*10000)
+    .EUt(16)
+    .duration(200)
+    .dimension(4598)
+    .buildAndRegister()
+
+//tuff aloy dust
+mods.gregtech.mixer.recipeBuilder()
+    .inputs(ore("dustStainlessSteel"), ore("dustTitanium"))
+    .outputs(metaitem("dustTough")*2)
+    .duration(200)
+    .EUt(7)
+    .buildAndRegister()
