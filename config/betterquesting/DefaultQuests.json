@@ -17736,8 +17736,8 @@
         200,
         220,
         208,
-        380,
-        125
+        125,
+        471
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -24937,13 +24937,12 @@
     },
     "380:10": {
       "preRequisites:11": [
-        379,
-        207
+        379
       ],
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "No more cursed centrifuging U-238.\nWe got proper nuclear reactors now.\nNuclearcraft Overhauled adds Solid Fission Reactors, which will supply you with all your radioactive needs.\nFor planning one I recommend §9https://github.com/ThizThizzyDizzy/nc-reactor-generator/releases\n§rThe items in this task are the absolute minimum required to progress.",
+          "desc:8": "No more cursed centrifuging U-238.\nWe got proper nuclear reactors now.\nNuclearcraft Overhauled adds Solid Fission Reactors, which will supply you with all your radioactive needs.\nFor planning one I recommend §9https://github.com/ThizThizzyDizzy/nc-reactor-generator/releases\n§rFor more information refer to the NC:O chapter",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -24967,48 +24966,24 @@
         }
       },
       "questID:3": 380,
-      "rewards:9": {},
-      "tasks:9": {
+      "rewards:9": {
         "0:10": {
-          "autoConsume:1": 0,
-          "consume:1": 0,
-          "groupDetect:1": 0,
-          "ignoreNBT:1": 0,
           "index:3": 0,
-          "partialMatch:1": 1,
-          "requiredItems:9": {
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
             "0:10": {
               "Count:3": 1,
               "Damage:2": 0,
               "OreDict:8": "",
-              "id:8": "nuclearcraft:solid_fission_controller"
-            },
-            "1:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:solid_fission_cell"
-            },
-            "2:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fission_irradiator"
-            },
-            "3:10": {
-              "Count:3": 1,
-              "Damage:2": 0,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:fission_casing"
-            },
-            "4:10": {
-              "Count:3": 1,
-              "Damage:2": 14,
-              "OreDict:8": "",
-              "id:8": "nuclearcraft:part"
+              "id:8": "nuclearcraft:multitool"
             }
-          },
-          "taskID:8": "bq_standard:retrieval"
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
         }
       }
     },
@@ -25699,8 +25674,8 @@
     },
     "392:10": {
       "preRequisites:11": [
-        380,
-        215
+        215,
+        471
       ],
       "properties:10": {
         "betterquesting:10": {
@@ -30504,6 +30479,257 @@
           "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "471:10": {
+      "preRequisites:11": [
+        473
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "You can obtain this by irradiating an eye of ender. To learn more about irradiation refer to the NC:O chapter.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 281,
+            "OreDict:8": "",
+            "id:8": "gregtech:meta_item_1"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Quantum Eye",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 471,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 281,
+              "OreDict:8": "",
+              "id:8": "gregtech:meta_item_1"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "472:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "A sold fuel fission reactor (SFR for short) uses solid fissile fuels to produce high pressure steam (HPS).\nA reactor consists of a §acasing§r and some §ainside components§r.\nA reactor always has to be cuboid and smaller than §c§r§c23x23x23§r.\nThe vertices have to be made out of §afission reactor casing§r.\nThe rest of the casing has to contain the controller somewhere and can be made out of ports, vents, transparent and intransparent casings and neutron sources\nThese §ainside components§r can be of the following types:\n§7Fuel Cells§r, §2§4§6Moderators§r, §9Heat Sinks§r.\nEach §7Fuel Cell§r has a piece of fuel in it.\nEvery NC:O fuel has the following properties:\n§rThe §abase depletion time§r tells you how long it will take the fuel to be spent while the §7cell§r is active.\nThe §ebase heat gen§r is the amount of heat generated per active §6moderator line§r every tick.\nThe §dbase efficiency§r is a multiplier to the total efficiency of the fuel cell that guides the HPS output it produces.\nThe §ccriticality factor§r is the amount of §3neutron flux§3§r required for the §7cell§r to be active.\nNeutron flux propagates through§l §6moderator lines§r. §6Moderator lines§r are continuous axis aligned lines of §6§r§6moderators§r between §72 cells§r They have a maximum length of 4. A §6moderator line§r provides both §7cells§r with an amount of §3flux§r equal to the sum of the §3neutron flux§r values of the §6moderator blocks§r. It also increases each §7cells§r heat generation by +100% and its efficiency by the mean of the §6moderator§r efficiencies§3§3§\n.\n§6Moderator lines§r only provide flux to cells if the other §6§7cell§r is active or primed by a §rneutron source (must be in the casing, pointing to the §7cell§r and receive a redstone signal)\n§7Cells§r§r are provided with fuel by Fission Fuel Cell Ports. They can be switched between input and output mode by using a multitool on them.\n\n§\nEach §7cell§r produces a certain amount of heat per tick. If this heat isn\u0027t removed, the §7cell§r will eventually melt down. Removing heat is done by §9heat sinks§r. Each §9heat sink§r has a certain placement rule and cooling amount per tick that it provides if the placement rule is fulfilled. For the purpose of heat sink placement rules only the §6moderator blocks§r adjacent to the §7fuel cells§r count.\nA cluster consists of adjacen §9heat sinks, §7cells§r and conductors and all heat in a cluster is shared. Usually you try to have everything in the reactor in one cluster. Only validly placed heatsinks can be part of a cluster.\n\n§9Heat sinks§r remove the heat from the §7cells§r and dump it into the reactor casing. If the casing overheats the controller melts down. To remove heat from the casing you have to install reactor vents, one in input mode and one in output mode. To switch between them just use the multitool on the placed block.\nDifferent to GTCEu buses and hatches, nuclearcraft multiblock interfaces only push, but never pull in.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:solid_fission_controller"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Solid Fuel Fission Reactor",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 472,
+      "rewards:9": {
+        "0:10": {
+          "choices:9": {
+            "0:10": {
+              "Count:3": 32,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_casing"
+            },
+            "1:10": {
+              "Count:3": 32,
+              "Damage:2": 14,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:part"
+            }
+          },
+          "index:3": 0,
+          "rewardID:8": "bq_standard:choice"
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:solid_fission_controller"
+            },
+            "1:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:solid_fission_cell"
+            },
+            "2:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_source"
+            },
+            "3:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_vent"
+            },
+            "4:10": {
+              "Count:3": 2,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_cell_port"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "473:10": {
+      "preRequisites:11": [
+        472
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Neutron irradiators can be used to irradiate a material with neutrons to change its properties.\nIrradiator recipes have a certain amount of required flux. A neutron irradiator receives an amount of flux equal to the sum of the moderation values of the moderators in the moderator lines connecting it to an active cell.\nFor example an irradiator connected to a cell via 2 heavy water moderators receives 2x36 \u003d 72 Flux/t and takes 160000/72 \u003d 2222 ticks to process a thorium dust to Pa enriched Th.\nModerator lines to neutron irradiators also contribute normally to heat production of the cell.\nThe cells efficiency is only increased if the recipe has an efficiency contribution.\nIrradiator recipes can also produce heat per flux received - be careful.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:fission_irradiator"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Neutron Irradiators",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 473,
+      "rewards:9": {
+        "0:10": {
+          "index:3": 0,
+          "rewardID:8": "bq_standard:item",
+          "rewards:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:record_wanderer"
+            }
+          }
+        }
+      },
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_irradiator"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "474:10": {
+      "preRequisites:11": [
+        472
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Neutron Reflectors can provide Cells with extra flux, without having to add an extra cell. A neutron reflector has to be connected to a cell via a moderator line. Since the neutrons come from the cell and go to it again they have to pass each moderator twice. A neutron reflector provides the connected cell with 2x the sum of the moderation values of the moderators times the reflector\u0027s reflectivity value.\nFor example a lead steel reflector with 2 beryllium blocks between it and the cell provides the cell with 2x0.5x44 \u003d 44 Flux/t.\nModerator lines with reflectors contribute to the heat production of the cell like a normal moderator line with a cell at the end. +100% per moderator line.\nThe efficiency added to the cell is equal to the mean of the moderator efficiencies times the efficiency multiplier of the neutron moderator.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:fission_reflector"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Neutron Reflectors",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 474,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "index:3": 0,
+          "taskID:8": "bq_standard:checkbox"
+        }
+      }
     }
   },
   "questLines:9": {
@@ -32763,8 +32989,8 @@
           "id:3": 207,
           "sizeX:3": 36,
           "sizeY:3": 36,
-          "x:3": -12,
-          "y:3": 276
+          "x:3": -36,
+          "y:3": 300
         },
         "6:10": {
           "id:3": 208,
@@ -33055,10 +33281,10 @@
         },
         "47:10": {
           "id:3": 380,
-          "sizeX:3": 36,
-          "sizeY:3": 36,
-          "x:3": -12,
-          "y:3": 192
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -24,
+          "y:3": 252
         },
         "48:10": {
           "id:3": 381,
@@ -33099,8 +33325,8 @@
           "id:3": 392,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 204
+          "x:3": 48,
+          "y:3": 156
         },
         "54:10": {
           "id:3": 408,
@@ -33131,18 +33357,11 @@
           "y:3": 18
         },
         "58:10": {
-          "id:3": 469,
+          "id:3": 471,
           "sizeX:3": 24,
           "sizeY:3": 24,
-          "x:3": 60,
-          "y:3": 168
-        },
-        "59:10": {
-          "id:3": 470,
-          "sizeX:3": 24,
-          "sizeY:3": 24,
-          "x:3": 36,
-          "y:3": 144
+          "x:3": -24,
+          "y:3": 156
         }
       }
     },
@@ -35376,6 +35595,69 @@
           "sizeY:3": 24,
           "x:3": 456,
           "y:3": 342
+        }
+      }
+    },
+    "15:10": {
+      "lineID:3": 15,
+      "order:3": 15,
+      "properties:10": {
+        "betterquesting:10": {
+          "bg_image:8": "",
+          "bg_size:3": 256,
+          "desc:8": "Splitting the atom",
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:radaway"
+          },
+          "name:8": "Nuclearcraft: Overhauled",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "quests:9": {
+        "0:10": {
+          "id:3": 380,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 0
+        },
+        "1:10": {
+          "id:3": 469,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 24
+        },
+        "2:10": {
+          "id:3": 470,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": 0
+        },
+        "3:10": {
+          "id:3": 472,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 0,
+          "y:3": 48
+        },
+        "4:10": {
+          "id:3": 473,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 12,
+          "y:3": 96
+        },
+        "5:10": {
+          "id:3": 474,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -12,
+          "y:3": 96
         }
       }
     }
