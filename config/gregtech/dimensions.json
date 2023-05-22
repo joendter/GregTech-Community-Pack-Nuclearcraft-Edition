@@ -11,6 +11,10 @@
     {
       "dimID": -1,
       "dimName": "Nether"
+    },
+    {
+      "dimID": 4598,
+      "dimName": "Nuclear Wasteland Dimension"
     }
   ]
 }
