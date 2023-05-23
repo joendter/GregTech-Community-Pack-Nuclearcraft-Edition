@@ -1,4 +1,4 @@
-# GregTech-Community-Pack
+# GregTech-Community-Pack: Nuclearcraft Edition
 
 Repository for the GregTech Community Modpack: Nuclearcraft Edition - a minecraft modpack for 1.12.2 highlighting and featuring [GregTech Community Edition Unofficial](https://github.com/GregTechCEu/GregTech) and [Nuclearcraft Overhauled](https://github.com/tomdodd4598/NuclearCraft).
 
