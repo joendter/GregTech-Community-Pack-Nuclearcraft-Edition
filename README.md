@@ -4,9 +4,9 @@ Repository for the GregTech Community Modpack - a minecraft modpack for 1.12.2 h
 
 ## Playing
 
-The modpack is available on [Curseforge](https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack).
+The modpack is available on [Curseforge](https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack-gcp-nuclearcraft-edition).
 
-To play with the latest commits, go to [Releases](https://github.com/GregTechCEu/GregTech-Community-Pack/releases) and download `client.zip`.
+To play with the latest commits, go to [Releases](https://github.com/joendter/GregTech-Community-Pack-Nuclearcraft-Edition/releases) and download `client.zip`.
 Drag and drop the archive file into the launcher of your choice that supports Curseforge.
 
 ## Building
@@ -16,3 +16,4 @@ You need `Python3` and `Python Requests` installed. Building is done through run
 ## Credits
 
 Build Scripts by [htmlcsjs](https://github.com/htmlcsjs).
+[Base Modpack](https://github.com/GregTechCEu/GregTech-Community-Pack)
