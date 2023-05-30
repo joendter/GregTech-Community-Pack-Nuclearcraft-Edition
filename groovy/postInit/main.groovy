@@ -268,6 +268,9 @@ mods.gregtech.chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_central
 mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:nether_star')], [fluid('radon') * 1250])
 // Quantum Eye * 1
 mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:ender_eye')], [fluid('radon') * 250])
+// Qubit CPU Wafer * 1
+mods.gregtech.large_chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_central_processing_unit'), metaitem('dustIndiumGalliumPhosphide')], [fluid('radon') * 50])
+
 
 
 //hazmat suit
