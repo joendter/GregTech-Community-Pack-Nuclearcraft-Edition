@@ -30539,7 +30539,7 @@
       "properties:10": {
         "betterquesting:10": {
           "autoclaim:1": 0,
-          "desc:8": "A sold fuel fission reactor (SFR for short) uses solid fissile fuels to produce high pressure steam (HPS).\nA reactor consists of a §acasing§r and some §ainside components§r.\nA reactor always has to be cuboid and smaller than §c§r§c23x23x23§r.\nThe vertices have to be made out of §afission reactor casing§r.\nThe rest of the casing has to contain the controller somewhere and can be made out of ports, vents, transparent and intransparent casings and neutron sources\nThese §ainside components§r can be of the following types:\n§7Fuel Cells§r, §2§4§6Moderators§r, §9Heat Sinks§r.\nEach §7Fuel Cell§r has a piece of fuel in it.\nEvery NC:O fuel has the following properties:\n§rThe §abase depletion time§r tells you how long it will take the fuel to be spent while the §7cell§r is active.\nThe §ebase heat gen§r is the amount of heat generated per active §6moderator line§r every tick.\nThe §dbase efficiency§r is a multiplier to the total efficiency of the fuel cell that guides the HPS output it produces.\nThe §ccriticality factor§r is the amount of §3neutron flux§3§r required for the §7cell§r to be active.\nNeutron flux propagates through§l §6moderator lines§r. §6Moderator lines§r are continuous axis aligned lines of §6§r§6moderators§r between §72 cells§r They have a maximum length of 4. A §6moderator line§r provides both §7cells§r with an amount of §3flux§r equal to the sum of the §3neutron flux§r values of the §6moderator blocks§r. It also increases each §7cells§r heat generation by +100% and its efficiency by the mean of the §6moderator§r efficiencies§3§3§\n.\n§6Moderator lines§r only provide flux to cells if the other §6§7cell§r is active or primed by a §rneutron source (must be in the casing, pointing to the §7cell§r and receive a redstone signal)\n§7Cells§r§r are provided with fuel by Fission Fuel Cell Ports. They can be switched between input and output mode by using a multitool on them.\n\n§\nEach §7cell§r produces a certain amount of heat per tick. If this heat isn\u0027t removed, the §7cell§r will eventually melt down. Removing heat is done by §9heat sinks§r. Each §9heat sink§r has a certain placement rule and cooling amount per tick that it provides if the placement rule is fulfilled. For the purpose of heat sink placement rules only the §6moderator blocks§r adjacent to the §7fuel cells§r count.\nA cluster consists of adjacen §9heat sinks, §7cells§r and conductors and all heat in a cluster is shared. Usually you try to have everything in the reactor in one cluster. Only validly placed heatsinks can be part of a cluster.\n\n§9Heat sinks§r remove the heat from the §7cells§r and dump it into the reactor casing. If the casing overheats the controller melts down. To remove heat from the casing you have to install reactor vents, one in input mode and one in output mode. To switch between them just use the multitool on the placed block.\nDifferent to GTCEu buses and hatches, nuclearcraft multiblock interfaces only push, but never pull in.",
+          "desc:8": "A sold fuel fission reactor (SFR for short) uses solid fissile fuels to produce high pressure steam (HPS).\nA reactor consists of a §acasing§r and some §ainside components§r.\nA reactor always has to be cuboid and smaller than §c§r§c23x23x23§r.\nThe vertices have to be made out of §afission reactor casing§r.\nThe rest of the casing has to contain the controller somewhere and can be made out of ports, vents, transparent and intransparent casings and neutron sources\nThese §ainside components§r can be of the following types:\n§7Fuel Cells§r, §2§4§6Moderators§r, §9Heat Sinks§r.\nEach §7Fuel Cell§r has a piece of fuel in it.\nEvery NC:O fuel has the following properties:\n§rThe §abase depletion time§r tells you how long it will take the fuel to be spent while the §7cell§r is active.\nThe §ebase heat gen§r is the amount of heat generated per active §6moderator line§r every tick.\nThe §dbase efficiency§r is a multiplier to the total efficiency of the fuel cell that guides the HPS output it produces.\nThe §ccriticality factor§r is the amount of §3neutron flux§3§r required for the §7cell§r to be active.\nNeutron flux propagates through§l §6moderator lines§r. §6Moderator lines§r are continuous axis aligned lines of §6§r§6moderators§r between §72 cells§r They have a maximum length of 4. A §6moderator line§r provides both §7cells§r with an amount of §3flux§r equal to the sum of the §3neutron flux§r values of the §6moderator blocks§r. It also increases each §7cells§r heat generation by +100% and its efficiency by the mean of the §6moderator§r efficiencies§3§3§\n.\n§6Moderator lines§r only provide flux to cells if the other §6§7cell§r is active or primed by a §rneutron source (must be in the casing, pointing to the §7cell§r and receive a redstone signal)\n§7Cells§r§r are provided with fuel by Fission Fuel Cell Ports. They can be switched between input and output mode by using a multitool on them.\n\n§\nEach §7cell§r produces a certain amount of heat per tick. If this heat isn\u0027t removed, the §7cell§r will eventually melt down. Removing heat is done by §9heat sinks§r. Each §9heat sink§r has a certain placement rule and cooling amount per tick that it provides if the placement rule is fulfilled. For the purpose of heat sink placement rules only the §6moderator blocks§r adjacent to the §7fuel cells§r count.\nA cluster consists of adjacen §9heat sinks, §7cells§r and conductors and all heat in a cluster is shared. Usually you try to have everything in the reactor in one cluster. Only validly placed heatsinks can be part of a cluster.\n\n§9Heat sinks§r remove the heat from the §7cells§r and dump it into the reactor casing. If the casing overheats the controller melts down. To remove heat from the casing you have to install reactor vents, one in input mode and one in output mode. To switch between them just use the multitool on the placed block.\nDifferent to GTCEu buses and hatches, nuclearcraft multiblock interfaces only push, but never pull in.\n\nYou can only use oxide, nitride, or zirconium alloy fuels in SFRs. The \"unalloyed\" variants, for example LEU-235 are only crafting materials and the carbides are for an eventual pebble bed reacto that isn\u0027t implemented.",
           "globalshare:1": 0,
           "icon:10": {
             "Count:3": 1,
@@ -30712,6 +30712,75 @@
           "issilent:1": 0,
           "lockedprogress:1": 0,
           "name:8": "Neutron Reflectors",
+          "questlogic:8": "NAND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "OR",
+          "visibility:8": "ALWAYS"
+        }
+      },
+      "questID:3": 474,
+      "rewards:9": {},
+      "tasks:9": {
+        "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 0,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_reflector"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        },
+        "1:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
+          "index:3": 1,
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 1,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:fission_reflector"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
+        }
+      }
+    },
+    "475:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "Nuclearcraft adds its own steam turbines, and they\u0027re way more customisable and powerful than GTCEu\u0027s steam turbines.\n\nA turbine needs a cuboidal casing. It has to have the dimensions n+4 x n+4 x m+2 where n and m are integers and \u003e 0. The vertices have to be made out of turbine casing.\n\nIn one of the sides with dimensions n+4 x m+2 the controller has to be placed. For the turbine to process steam it needs a redstone signal.\n\nOn the sides with dimensions n+4 x n+4 you will have to place a fluid inlet on the one side and a fluid outlet on the other. Keep the fluid outlet empty if you want to make the turbine last. Also make sure that the fluid inlet doesn\u0027t contain more steam than your turbine can process in 1 tick, to avoid it ripping itself apart. You can achieve this using a §lfluid regulator§r set to \"keep exact\".\nYou will also have to place 2 identical centred squares of rotor bearings on each of the ends. If n is even, the side length of these squares has to as well. If not then it has to be odd.\nAround these rotor bearings you place your coils according to their placement rules. This is where you will extract your power. I recommend using an §lenergy converter§r, set to convert FE to GTCEuEU. Everything else I tried blew up.\n\nIn between the rotor bearings you place rotor shafts.\nEach slice of the turbine with the dimension n+4 x n+4 has exactly 1 turbine blade type. The turbine blades are placed between the rotor shafts and the casing (draw an axis aligned line from every rotor shaft to the casing, fill all air blocks on this line with blades). \nBlades have 2 stats:\nThe §defficiency multiplier§r is just a straight up multiplier to the turbine energy output. The mean §defficiency multiplier§r of all blade slices is used.\nThe §bexpansion coefficient§r also affects the turbine efficiency: Each turbine recipe has a fluid expansion. The turbine should model this expansion as closely as possible. At the k-th layer from the side with the inlet the cumultative product of the §bexpansion coefficients§r should be c^((k - 0.5)/m) where c is the fluid expansion of the recipe you\u0027re running.",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "nuclearcraft:turbine_controller"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "Turbines",
           "questlogic:8": "AND",
           "repeat_relative:1": 1,
           "repeattime:3": -1,
@@ -30722,14 +30791,61 @@
           "visibility:8": "ALWAYS"
         }
       },
-      "questID:3": 474,
+      "questID:3": 475,
       "rewards:9": {},
       "tasks:9": {
         "0:10": {
+          "autoConsume:1": 0,
+          "consume:1": 0,
+          "groupDetect:1": 0,
+          "ignoreNBT:1": 0,
           "index:3": 0,
-          "taskID:8": "bq_standard:checkbox"
+          "partialMatch:1": 1,
+          "requiredItems:9": {
+            "0:10": {
+              "Count:3": 1,
+              "Damage:2": 0,
+              "OreDict:8": "",
+              "id:8": "nuclearcraft:turbine_controller"
+            }
+          },
+          "taskID:8": "bq_standard:retrieval"
         }
       }
+    },
+    "476:10": {
+      "preRequisites:11": [
+        380
+      ],
+      "properties:10": {
+        "betterquesting:10": {
+          "autoclaim:1": 0,
+          "desc:8": "No Description",
+          "globalshare:1": 0,
+          "icon:10": {
+            "Count:3": 1,
+            "Damage:2": 0,
+            "OreDict:8": "",
+            "id:8": "minecraft:nether_star"
+          },
+          "ignoresview:1": 0,
+          "ismain:1": 0,
+          "issilent:1": 0,
+          "lockedprogress:1": 0,
+          "name:8": "New Quest",
+          "questlogic:8": "AND",
+          "repeat_relative:1": 1,
+          "repeattime:3": -1,
+          "simultaneous:1": 0,
+          "snd_complete:8": "minecraft:entity.player.levelup",
+          "snd_update:8": "minecraft:entity.player.levelup",
+          "tasklogic:8": "AND",
+          "visibility:8": "HIDDEN"
+        }
+      },
+      "questID:3": 476,
+      "rewards:9": {},
+      "tasks:9": {}
     }
   },
   "questLines:9": {
@@ -35658,13 +35774,27 @@
           "sizeY:3": 24,
           "x:3": -12,
           "y:3": 96
+        },
+        "6:10": {
+          "id:3": 475,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": -72,
+          "y:3": 0
+        },
+        "7:10": {
+          "id:3": 476,
+          "sizeX:3": 24,
+          "sizeY:3": 24,
+          "x:3": 72,
+          "y:3": -24
         }
       }
     }
   },
   "questSettings:10": {
     "betterquesting:10": {
-      "editmode:1": 1,
+      "editmode:1": 0,
       "hardcore:1": 0,
       "home_anchor_x:5": 0.5,
       "home_anchor_y:5": 0.0,
