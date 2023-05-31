@@ -1,9 +1,10 @@
 import gregtech.api.unification.material.properties.PropertyKey
-// import the material event
 import gregtech.api.GregTechAPI.MaterialEvent
 import gregtech.api.unification.material.Material
 import gregtech.api.unification.material.properties.IngotProperty
 import gregtech.api.unification.material.properties.FluidProperty
+import gregtech.api.fluids.fluidType.FluidTypes
+
 
 // register an event listener
 event_manager.listen { MaterialEvent event ->
@@ -60,7 +61,21 @@ def HSLA = new Material.Builder(32009, "h_s_l_a_steel")
 //     .components(material("nitrogen"),1)
 //     .build()
 
+String[] enrichments = [
+    "slightly",
+    "medium",
+    "high"
+]
 
+for(int i = 0; i < enrichments.size(); i++){
+    new Material.Builder(32010+i, enrichments[i]+ "_enriched_uranium_hexafluoride")
+        .fluid(FluidTypes.GAS)
+        .color(0x42D126 + 0x000800 * (i+1))
+        .flags("disable_decomposition")
+        .components(material("uranium"), 1, material("fluorine"), 6)
+        .build()
+        .setFormula("UF6", true);
+}
 
 material("zirconium").properties.ensureSet(PropertyKey.DUST)
 material("zirconium").setMaterialRGB(16316912)
