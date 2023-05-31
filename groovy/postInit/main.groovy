@@ -1,4 +1,5 @@
 println('Hello World!')
+println(0x000001 *2)
 
 furnace.add(ore('dustZirconium'), item('nuclearcraft:ingot', 10))
 mods.gregtech.centrifuge.removeByInput(320, [metaitem('dustUranium')], null)
@@ -268,9 +269,6 @@ mods.gregtech.chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_central
 mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:nether_star')], [fluid('radon') * 1250])
 // Quantum Eye * 1
 mods.gregtech.chemical_bath.removeByInput(480, [item('minecraft:ender_eye')], [fluid('radon') * 250])
-// Qubit CPU Wafer * 1
-mods.gregtech.large_chemical_reactor.removeByInput(1920, [metaitem('wafer.nano_central_processing_unit'), metaitem('dustIndiumGalliumPhosphide')], [fluid('radon') * 50])
-
 
 
 //hazmat suit
@@ -383,3 +381,29 @@ mods.gregtech.mixer.recipeBuilder()
     .duration(200)
     .EUt(7)
     .buildAndRegister()
+
+
+//Uranium enrichment
+int ratio = 757
+// Enriched Uranium Hexafluoride * 100
+mods.gregtech.centrifuge.removeByInput(480, null, [fluid('uranium_hexafluoride') * 1000])
+
+String[] UFs =[
+    "depleted_",
+    "",
+    "slightly_enriched_",
+    "medium_enriched_",
+    "high_enriched_",
+    "enriched_"
+]
+
+String UF = "uranium_hexafluoride"
+
+for(int i = 1; i < UFs.size()-1; i++){
+    mods.gregtech.centrifuge.recipeBuilder()
+        .fluidInputs(fluid(UFs[i] + UF)*1000)
+        .fluidOutputs(fluid(UFs[i-1] + UF)*ratio, fluid(UFs[i+1] + UF)*(1000-ratio))
+        .duration(160)
+        .EUt(480)
+        .buildAndRegister()
+}
