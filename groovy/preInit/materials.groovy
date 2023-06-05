@@ -70,7 +70,7 @@ String[] enrichments = [
 for(int i = 0; i < enrichments.size(); i++){
     new Material.Builder(32010+i, enrichments[i]+ "_enriched_uranium_hexafluoride")
         .fluid(FluidTypes.GAS)
-        .color(0x42D126 + 0x000800 * (i+1))
+        .color(0x42D126 + 0x020901 * (i+1))
         .flags("disable_decomposition")
         .components(material("uranium"), 1, material("fluorine"), 6)
         .build()
